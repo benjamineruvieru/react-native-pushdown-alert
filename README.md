@@ -4,7 +4,7 @@ React Native Push Down Alert
 
 <p align="center">
   <a href="https://www.npmjs.com/package/react-native-pushdown-alert">
-    <img alt="npm version" src="https://badge.fury.io/js/react-native-credentials-manager.svg"/>
+    <img alt="npm version" src="https://badge.fury.io/js/react-native-pushdown-alert.svg"/>
   </a>
   <a title='License' href="https://github.com/benjamineruvieru/react-native-pushdown-alert/blob/master/LICENSE" height="18">
     <img src='https://img.shields.io/badge/license-MIT-blue.svg' />
