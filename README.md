@@ -94,9 +94,9 @@ const App = () => {
    ```
 
 3. Trigger Notifications : Use the showNotification function anywhere in your app to trigger alerts. You can call this function in response to events, such as button presses or API responses.
-
-   > [!NOTE]  
-   > If a notification is already showing, subsequent `showNotification` calls will be queued based your chosen queuing behavior.
+   
+> [!NOTE]  
+> If a notification is already showing, subsequent `showNotification` calls will be queued based your chosen queuing behavior.
 
    ```typescript
    showNotification({
