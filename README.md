@@ -71,34 +71,68 @@ const App = () => {
   );
 };
 
-
 ```
+
+### Step-by-Step Guide
+
+1. Import the Components : Import PushDownAlertPortal and showNotification from the library.
+
+   ```typescript
+   import { PushDownAlertPortal } from 'react-native-pushdown-alert';
+   ```
+
+2. Place the Portal : Place the PushDownAlertPortal component as high as possible in your component tree. This ensures that alerts can be displayed over all other components.
+
+   ```typescript
+   const App = () => {
+   return (
+    <PushDownAlertPortal config={config}>
+      {...rest of your app}
+    </PushDownAlertPortal>
+   );
+   };
+   ```
+
+3. Trigger Notifications : Use the showNotification function anywhere in your app to trigger alerts. You can call this function in response to events, such as button presses or API responses.
+
+   > [!NOTE]  
+   > If a notification is already showing, subsequent `showNotification` calls will be queued based your chosen queuing behavior.
+
+   ```typescript
+   showNotification({
+     type: 'success',
+     message: 'Hi a message body',
+     title: 'Hello World',
+   });
+   ```
 
 ## API
 
 ### showNotification
 
 - Parameters :
-  - type : Type of the alert ( 'success' , 'error' , 'warning' ).
-  - title : Title of the alert.
-  - message : Message body of the alert.
+  - `type` : Type of the alert ( `success` , `error` , `warning` ).
+  - `title` : Title of the alert.
+  - `message` : Message body of the alert.
 
 ### PushDownAlertPortal
 
 - Props :
-  - config : Configuration object for customizing alert behavior and appearance.
+  - `config` : Configuration object for customizing alert behavior and appearance.
 
 ## Configuration
 
 You can customize the alert behavior and appearance by passing a configuration object to the PushDownAlertPortal component. Here are some of the available options:
 
-- alertDisplayDuration : Duration for which the alert is displayed.
-- openAnimationDuration : Duration of the open animation.
-- closeAnimationDuration : Duration of the close animation.
-- alertQueueBehaviour : Determines whether to queue alerts or cancel the current one ( 'queue' or 'cancelCurrent' ).
-- titleTextStyle : Custom style for the alert title.
-- messageTextStyle : Custom style for the alert message.
-- successConfig , errorConfig , warningConfig : Custom configurations for each alert type, including icons and background colors.
+- `alertDisplayDuration` : Duration for which the alert is displayed.
+- `openAnimationDuration` : Duration of the open animation.
+- `closeAnimationDuration` : Duration of the close animation.
+- `alertQueueBehaviour` : Determines how alerts are handled when a notification is already showing. Options include:
+  - `queue` : New alerts are added to a queue and displayed sequentially.
+  - `cancelCurrent` : The current alert is dismissed, and the new alert is displayed immediately.
+- `titleTextStyle` : Custom style for the alert title.
+- `messageTextStyle` : Custom style for the alert message.
+- `successConfig` , `errorConfig` , `warningConfig` : Custom configurations for each alert type, including icons and background colors.
 
 ### Sample Configuration
 
@@ -134,7 +168,3 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
-
-```
-
-```
