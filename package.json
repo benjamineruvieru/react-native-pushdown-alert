@@ -1,7 +1,7 @@
 {
   "name": "react-native-pushdown-alert",
   "version": "0.1.0",
-  "description": "Alert",
+  "description": "A customizable pushdown alert component for React Native applications.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
@@ -48,7 +48,17 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "web",
+    "alert",
+    "pushdown alert",
+  "notification",
+  "customizable",
+  "success alert",
+  "error alert",
+  "warning alert",
+  "animation"
+  
   ],
   "repository": {
     "type": "git",
@@ -59,7 +69,7 @@
   "bugs": {
     "url": "https://github.com/benjamineruvieru/react-native-pushdown-alert/issues"
   },
-  "homepage": "https://github.com/benjamineruvieru/react-native-pushdown-alert#readme",
+  "homepage": "https://docs.benjamineruvieru.com/docs/react-native-pushdown-alert",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

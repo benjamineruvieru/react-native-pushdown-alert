@@ -23,8 +23,7 @@ export default function App() {
           onPress={() =>
             showNotification({
               type: 'error',
-              message:
-                'Hi a message body with a long text, a really really long text, I mean really long text, yh it is long',
+              message: 'Hi a message body',
               title: 'Hello World',
             })
           }
@@ -49,6 +48,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'purple',
   },
 });
