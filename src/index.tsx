@@ -1,3 +1,4 @@
-export function multiply(a: number, b: number): number {
-  return a * b;
-}
+import { showNotification } from './helper_functions';
+import PushDownAlertPortal from './PushDownAlertPortal';
+
+export { PushDownAlertPortal, showNotification };
