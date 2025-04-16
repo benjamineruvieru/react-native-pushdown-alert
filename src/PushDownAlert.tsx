@@ -184,6 +184,7 @@ const PushDownAlert: React.FC<PushDownAlertProps> = ({
         styles.animatedView,
         {
           transform: [{ translateY: transY }],
+          opacity: isAlertDisplayed ? 1 : 0,
         },
       ]}
       onLayout={onLayout}
@@ -228,7 +229,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   msgContainer: {
-    marginLeft: 10,
+    marginLeft: 15,
   },
   titleTextStyle: { color: 'white', fontWeight: 'bold', fontSize: 16 },
   messageTextStyle: { color: 'white', fontWeight: 'normal' },
