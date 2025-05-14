@@ -24,7 +24,7 @@ type AlertConfig = {
   alertQueueBehaviour?: AlertQueueBehaviour;
   titleTextStyle?: TextStyle;
   messageTextStyle?: TextStyle;
-
+  disablePushDown?: boolean;
   successConfig?: {
     icon?: React.ReactNode;
     backgroundColor?: string;

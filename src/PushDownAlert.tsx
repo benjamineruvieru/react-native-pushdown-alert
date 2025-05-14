@@ -95,7 +95,10 @@ const PushDownAlert: React.FC<PushDownAlertProps> = ({
     }
 
     setTimeout(() => {
-      goDown(alertHeightRef.current);
+      if (!config?.disablePushDown) {
+        goDown(alertHeightRef.current);
+      }
+
       timer.current = setTimeout(() => {
         closeNotification();
       }, alertDisplayDuration);
@@ -114,7 +117,9 @@ const PushDownAlert: React.FC<PushDownAlertProps> = ({
       toValue: -alertHeightRef.current,
       duration: closeAnimationDuration,
     }).start(_onAlertClosed);
-    goUp();
+    if (!config?.disablePushDown) {
+      goUp();
+    }
   };
 
   useEffect(() => {
