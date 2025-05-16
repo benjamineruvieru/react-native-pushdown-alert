@@ -235,8 +235,13 @@ const styles = StyleSheet.create({
   },
   msgContainer: {
     marginLeft: 15,
+    paddingRight: 15,
   },
-  titleTextStyle: { color: 'white', fontWeight: 'bold', fontSize: 16 },
-  messageTextStyle: { color: 'white', fontWeight: 'normal' },
+  titleTextStyle: { color: 'white', fontWeight: 'bold', fontSize: 16, flex: 1 },
+  messageTextStyle: {
+    color: 'white',
+    fontWeight: 'normal',
+    flex: 1,
+  },
   iconStyle: { width: 20, height: 20 },
 });
